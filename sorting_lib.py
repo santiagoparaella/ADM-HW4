@@ -19,7 +19,7 @@ def countingSort(listelement): #create a function fors sorting
 
     finalList = [0 for i in range(len(listelement))] #create final list with zeros
    
-    for i in range(len(listelement)):
+    for i in range(len(listelement)): #find how many same elemnt
         finalList[ RunningSumList[listelement[i]] -1] = listelement[i]
         RunningSumList[listelement[i]] = RunningSumList[listelement[i]] -1
     print(finalList)
@@ -29,7 +29,7 @@ countingSort(listelement)
 
 
 #-----------implementation of Counting Sort,that receives in input a list with all the letters of the alphabet-----#
-def countingSortForAlphabet(listelement): #create a function fors sorting
+def countingSortForAlphabet(listelement): #create a function for alphabet sorting
     ordSortedList = [] #create empty order list
     alphabet ='AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz' #create an alphabet for your algorithm 
     alphabetDic = dict(enumerate(alphabet)) #create a dictionary to give a number for each alphabet
@@ -57,14 +57,14 @@ def countingSortForAlphabet(listelement): #create a function fors sorting
         RunningSumList[ordSortedList[i]] = RunningSumList[ordSortedList[i]] -1
     
    
-    for i in range(len(finalList)):
+    for i in range(len(finalList)): #return the number to alphabet
         for key, value in alphabetDic.items():
             if  finalList[i] == key:
                 finalList[i]= value
    
     return(finalList)
 NameList = ['b','C','R','r','u','V','G','c','v','W','w','X','x','Y','I','g','H','h','m','S','s','y','Z','z','T','t','U','N','i','J','l','M','D','d','E','e','A','a','B','F','f','j','K','k','L','n','O','o','P','p','Q','q']
-
+#give a random alphabet list for test function
 countingSortForAlphabet(NameList)
 
 
@@ -76,7 +76,7 @@ countingSortForAlphabet(NameList)
 
 #---implementation of Counting Sort, that receives in input a list of length m #
 # that contains words with maximum length equal to n, and returns the list ordered according to alphabetical order.---------- #
-def countingSortForAlphabet(listelement):
+def countingSortForAlphabet(listelement): #same function with Q.2.2
     ordSortedList = []
     alphabet =' AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz'
     alphabetDic = dict(enumerate(alphabet))
@@ -112,7 +112,7 @@ def countingSortForAlphabet(listelement):
     return(finalList)
 
 
-listOfWords = ['Astronomy','Astrolabe','Baa','Astrophysics','At','Aster','Ataman']
+listOfWords = ['Astronomy','Astrolabe','Baa','Astrophysics','At','Aster','Ataman'] #give a string list for test 
 #Aster; Astrolabe; Astronomy; Astrophysics; At; Ataman; Attack; Baa
 
 def count3(listOfWords, k):    
