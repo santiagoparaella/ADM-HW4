@@ -18,4 +18,4 @@ theoretical_lib.py: contains functions for task 4.
 
 teorethical.MD : contains description for task 4.
 
-main.ipynb: contains functions for task 1
+main.ipynb: contains explanation about strategy for task 1.
