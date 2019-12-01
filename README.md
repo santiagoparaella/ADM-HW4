@@ -8,12 +8,14 @@ On this repository we are:
 * _Dilara Isikli_ Univerity   ID: _1891292_ email: _dilaraisikli@hotmail.com_
 * _Syed Hassan_   University  ID: _0000000_ email: _syed.riot@gmail.com_
 
-hashing_lib.py: suggested python file that contains functions for task 1.
+hashing_lib.py: contains functions for task 1.
 
-sorting_lib.py: suggested python file that contains functions for task 2.
+sorting_lib.py: contains functions for task 2.
 
-clustering_lib.py: suggested python file that contains functions for task 3.
+clustering_lib.py: contains functions for task 3.
 
-theoretical_lib.py: suggested python file that contains functions for task 4.
+theoretical_lib.py: contains functions for task 4.
+
+teorethical.MD : contains description for task 4.
 
 main.ipynb: a Jupyter notebook explaines choices you made throughout the homework. If you do not create the aforementioned libraries, you should include all functions in this file. The notebook must be clear, complete and tidy. Here an example of a nice notebook from last year. Avoid pushing on GitHub notebook that contain entire long printed list, otherwise we will not be able to open it.
