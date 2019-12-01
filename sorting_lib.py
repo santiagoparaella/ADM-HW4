@@ -119,12 +119,12 @@ def count3(listOfWords, k):
     if len(listOfWords)==1:
         return listOfWords
     else:
-        firstLetters=[s[k] for s in listOfWords]
+        firstLetters=[s[k] for s in listOfWords]  #create a list for taking first latter of strings
         set_letters=set(firstLetters)
 
-        dict_lect={ch:[w for w in listOfWords if w[k]==ch] for ch in firstLetters}
+        dict_lect={ch:[w for w in listOfWords if w[k]==ch] for ch in firstLetters} #create dic for list of words
 
-        sort=countingSortForAlphabet(list(dict_lect.keys()))
+        sort=countingSortForAlphabet(list(dict_lect.keys())) #sort them
         out=[]
         for ch in sort:
             out+=count3(dict_lect[ch], k+1)
@@ -132,11 +132,11 @@ def count3(listOfWords, k):
 maxlen=0
 for w in listOfWords:
     if len(w)>maxlen:
-        maxlen=len(w)
+        maxlen=len(w) #define max len of all strings
 maxlen+=1
 for i in range(len(listOfWords)):
     if len(listOfWords[i])!=maxlen:
-        listOfWords[i]=listOfWords[i]+(' '*(maxlen-len(listOfWords[i])))
+        listOfWords[i]=listOfWords[i]+(' '*(maxlen-len(listOfWords[i]))) #if string doesnt have mex len,put ' ' until reach to max leng
 final=count3(listOfWords, 0)
 f=[w[:w.index(' ')] for w in final]
 print(f)
